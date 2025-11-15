@@ -10,14 +10,7 @@
       </NuxtLink>
     </template>
     <template #right-actions>
-      <ClientOnly>
-        <Button
-          :icon="isDark ? Sun : Moon"
-          class="p-1!"
-          variant="ghost"
-          @click="toggleDark"
-        />
-      </ClientOnly>
+      <Button :icon="Moon" class="p-1!" variant="ghost" @click="toggleDark" />
     </template>
     <template #view>
       <slot />
