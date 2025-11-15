@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  modules: ["motion-v/nuxt", "@vueuse/nuxt"],
   app: {
     head: {
       script: [
