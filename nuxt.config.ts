@@ -7,4 +7,22 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  app: {
+    head: {
+      script: [
+        {
+          innerHTML: `    const userPref = localStorage.getItem('color-mode');
+
+    if (userPref === 'dark') {
+      document.documentElement.classList.add('dark');
+      document.documentElement.style.background = 'oklch(20.5% 0 0)';
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.style.background = '#fff';
+    }`,
+          type: "text/javascript",
+        },
+      ],
+    },
+  },
 });
