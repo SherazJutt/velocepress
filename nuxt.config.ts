@@ -27,8 +27,8 @@ export default defineNuxtConfig({
 	},
 
 	alias: {
-		"@": "/",
-		"@images": "/assets/images",
+		"@": "~/",
+		"@images": "~/assets/images",
 	},
 
 	runtimeConfig: {
