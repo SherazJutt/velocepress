@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const { state, page } = useBuilderPage();
 const { textSizes, textStyles, headings, textWeights } = staticData();
 </script>

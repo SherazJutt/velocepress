@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useSortable } from "@vueuse/integrations/useSortable";
 
 const { addComponent, page, state } = useBuilderPage();
@@ -9,12 +9,12 @@ const items = [
 	{ label: "Settings", icon: "i-heroicons-cog-6-tooth", slot: "settings" },
 ];
 
-const removeComponent = (index) => {
+const removeComponent = (index: number): void => {
 	state.value.activeComponentIndex = null;
 	page.value.splice(index, 1);
 };
 
-const tree = ref(null);
+const tree = ref<HTMLElement | null>(null);
 
 // Watch when `tree` to make the sortabe work
 watch(tree, async (el) => {

@@ -1,9 +1,19 @@
-<script setup>
-defineProps(["content", "styles"]);
+<script setup lang="ts">
+interface Props {
+	content: {
+		heading: string;
+		description: string;
+	};
+	styles?: {
+		[key: string]: any;
+	};
+}
+
+defineProps<Props>();
 </script>
 <template>
 	<div class="flex px-[5%] md:flex-row flex-col items-center">
-		<div class="lg:flex-grow flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+		<div class="lg:grow flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
 			<h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">{{ content.heading }}</h1>
 			<p class="mb-8 leading-relaxed">{{ content.description }}</p>
 			<div class="flex justify-center">

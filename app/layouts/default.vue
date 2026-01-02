@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 useSeoMeta({ title: "Page Builder | VelocePress" });
 const { state } = useApp();
 const { state: builderState, page, save } = useBuilderPage();

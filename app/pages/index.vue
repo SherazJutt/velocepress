@@ -1,8 +1,8 @@
-<script setup>
+<script setup lang="ts">
 const { state, page, load } = useBuilderPage();
 await load();
 
-const setComponent = (component, index) => {
+const setComponent = (component: any, index: number): void => {
 	state.value.activeComponentIndex = index;
 };
 </script>
