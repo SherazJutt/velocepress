@@ -1,6 +1,6 @@
 <script setup>
-import { Button } from "veloce-vue/ui";
-import { Hamburger } from "veloce-vue/icons";
+import { Button, Layout } from "veloce-vue/ui";
+import { Hamburger, Save, LogOut } from "veloce-vue/icons";
 
 useSeoMeta({ title: "Page Builder | VelocePress" });
 const { state } = useApp();
@@ -15,12 +15,8 @@ const { state: builderState, page, save } = useBuilderPage();
     </div>
 
     <div class="flex items-center gap-4">
-      <!-- <Button @click="save">
-        <Icon name="i-lucide-lab:save" />
-      </Button> -->
-      <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gray-200">
-        <!-- <Icon class="size-6" name="i-lucide-image" /> -->
-      </div>
+      <Button :icon="Save" @click="save" />
+      <Button :icon="LogOut" />
     </div>
   </nav>
 
