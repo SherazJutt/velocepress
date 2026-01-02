@@ -8,7 +8,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.component("VButton", Button);
   nuxtApp.vueApp.component("VInput", Input);
   nuxtApp.vueApp.component("VSelect", Select);
-  nuxtApp.vueApp.component("VIcon", Icon);
+  nuxtApp.vueApp.component("Icon", Icon);
   nuxtApp.vueApp.component("VPopover", Popover);
   nuxtApp.vueApp.component("VToastContainer", ToastContainer);
 

@@ -1,6 +1,6 @@
 <template>
-	<NuxtLayout>
-		<NuxtPage />
-	</NuxtLayout>
-	<VToastContainer />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+  <!-- <VToastContainer /> -->
 </template>
