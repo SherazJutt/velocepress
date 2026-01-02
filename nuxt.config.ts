@@ -22,14 +22,9 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/ui", "@vueuse/nuxt"],
   css: ["./app/assets/css/main.css"],
-  ui: {
-    colorMode: false,
-  },
 
   alias: {
-    "@": "~/",
     "@images": "~/assets/images",
   },
 
