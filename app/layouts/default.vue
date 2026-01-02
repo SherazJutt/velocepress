@@ -1,5 +1,5 @@
 <script setup>
-useSeoMeta({ title: "Page Builder | Wodwes" });
+useSeoMeta({ title: "Page Builder | VelocePress" });
 const { state } = useApp();
 const { state: builderState, page, save } = useBuilderPage();
 </script>

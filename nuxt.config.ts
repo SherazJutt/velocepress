@@ -5,7 +5,7 @@ export default defineNuxtConfig({
 
 	app: {
 		// pageTransition: { name: 'page', mode: 'out-in' },
-		rootId: "__Wodwes-page-builder",
+		rootId: "__velocepress",
 		rootTag: "main",
 		head: {
 			title: "Wodwes Page Builder",
