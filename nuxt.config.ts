@@ -33,7 +33,7 @@ export default defineNuxtConfig({
 
 	runtimeConfig: {
 		public: {
-			pocketbaseUrl: "http://pocketbase-vkgoko4sgw0s4s4og084kcss.5.161.84.105.sslip.io",
+			pocketbaseUrl: "https://pocketbase-ptgwn.sevalla.app/",
 		},
 	},
 });

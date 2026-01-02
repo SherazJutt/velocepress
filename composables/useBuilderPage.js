@@ -29,7 +29,7 @@ export function useBuilderPage() {
 
 	const load = async () => {
 		try {
-			const res = await $pb.collection("pages").getOne("v08v1l61xi5j2j5");
+			const res = await $pb.collection("pages").getOne("m6ub364092026n0");
 			page.value = res.json;
 			console.log(res);
 		} catch (error) {
@@ -39,7 +39,7 @@ export function useBuilderPage() {
 
 	const save = async () => {
 		try {
-			const res = await $pb.collection("pages").update("v08v1l61xi5j2j5", { json: page.value });
+			const res = await $pb.collection("pages").update("m6ub364092026n0", { json: page.value });
 			console.log(res);
 		} catch (error) {
 			console.log(error.data);
