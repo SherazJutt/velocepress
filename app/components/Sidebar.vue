@@ -1,5 +1,6 @@
-<script setup lang="ts">
+<script setup>
 import { useSortable } from "@vueuse/integrations/useSortable";
+import { Hamburger, Close } from "veloce-vue/icons";
 
 const { addComponent, page, state } = useBuilderPage();
 
@@ -9,12 +10,12 @@ const items = [
 	{ label: "Settings", icon: "i-heroicons-cog-6-tooth", slot: "settings" },
 ];
 
-const removeComponent = (index: number): void => {
+const removeComponent = (index) => {
 	state.value.activeComponentIndex = null;
 	page.value.splice(index, 1);
 };
 
-const tree = ref<HTMLElement | null>(null);
+const tree = ref(null);
 
 // Watch when `tree` to make the sortabe work
 watch(tree, async (el) => {
@@ -27,19 +28,13 @@ watch(tree, async (el) => {
 <template>
 	<UAccordion :items="items" :ui="{ header: 'px-4 hover:bg-primary/10', content: 'px-4 py-2', item: 'last:border-b' }">
 		<template #components="{ item }">
-			<div class="grid grid-cols-4 gap-2">
+			<div class="space-y-2">
 				<!-- heading -->
-				<div class="flex-center hover:bg-primary/10 aspect-square flex justify-center items-center cursor-pointer rounded-md border" @click="addComponent('heading')">
-					<Icon class="text-3xl" name="i-gravity-ui:heading" />
-				</div>
+				<div class="flex-center hover:bg-primary/10 cursor-pointer p-2 rounded-md border" @click="addComponent('heading')">Heading</div>
 				<!-- paragraph -->
-				<div class="flex-center hover:bg-primary/10 aspect-square flex justify-center items-center cursor-pointer rounded-md border" @click="addComponent('paragraph')">
-					<Icon class="text-3xl" name="i-material-symbols:format-paragraph-rounded" />
-				</div>
+				<div class="flex-center hover:bg-primary/10 cursor-pointer p-2 rounded-md border" @click="addComponent('paragraph')">Paragraph</div>
 				<!-- hero -->
-				<div class="flex-center hover:bg-primary/10 aspect-square flex justify-center items-center cursor-pointer rounded-md border" @click="addComponent('hero')">
-					<Icon class="text-3xl" name="i-game-icons:tattered-banner" />
-				</div>
+				<div class="flex-center hover:bg-primary/10 cursor-pointer p-2 rounded-md border" @click="addComponent('hero')">Hero</div>
 			</div>
 
 			<hr class="mt-4" />
@@ -51,10 +46,10 @@ watch(tree, async (el) => {
 				<div class="space-y-1" ref="tree">
 					<div v-for="(component, index) in page" :key="index" class="flex items-center gap-2 justify-between hover:bg-gray-50 select-none">
 						<div class="flex items-center gap-2">
-							<UIcon class="cursor-pointer handle" name="i-heroicons:bars-3-solid" :size="18" />
+							<Hamburger class="cursor-pointer handle" :size="18" />
 							<h3 class="text-sm capitalize">{{ component.name }}</h3>
 						</div>
-						<UIcon class="cursor-pointer text-red-500" name="i-heroicons:x-mark-20-solid" :size="18" @click="removeComponent(index)" />
+						<Close class="cursor-pointer text-red-500" :size="18" @click="removeComponent(index)" />
 					</div>
 				</div>
 			</div>

@@ -16,6 +16,7 @@
 		"nuxt": "^4.2.2",
 		"pocketbase": "^0.25.0",
 		"sortablejs": "^1.15.6",
+		"veloce-vue": "^0.80.0",
 		"vue": "latest",
 		"vue-router": "latest"
 	},
